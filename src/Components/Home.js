@@ -134,9 +134,9 @@ const Home = ()=>{
   const checkListening = ()=>{
     if(!speechNotAvailable){
     if(listening===false )
-      return <MicNoneIcon style={{paddingRight:"10px"}} onClick={()=>{setListening(true); recognition.start()}}/>
+      return <MicNoneIcon style={{paddingRight:"10px"}} fontSize="large" onClick={()=>{setListening(true); recognition.start()}}/>
     else
-      return <MicIcon style={{paddingRight:"10px"}} onClick={()=>{setListening(false); recognition.stop()}} />
+      return <MicIcon style={{paddingRight:"10px"}} fontSize="large" onClick={()=>{setListening(false); recognition.stop()}} />
     }else{
       alert(speechNotAvailable)
     }

@@ -31,7 +31,6 @@ const CustomContainer = props=>{
       paddingBottom: theme.spacing(4),
   }
 }));
-  console.log(props.children);
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {

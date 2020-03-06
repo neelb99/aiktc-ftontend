@@ -8,7 +8,7 @@ import {Card,CardActionArea,CardActions,CardContent,CardMedia} from '@material-u
 const RecentNews = ()=>{
 	const useStyles = makeStyles({
 	  media: {
-	    height: 180,
+	    height: 150,
 	  },
 	});
 	const classes = useStyles();
@@ -27,7 +27,7 @@ const RecentNews = ()=>{
 		return news.map((item,key)=>{
 			return(
 				<Grid key={key} item xs={12} sm={6} md={4}>
-					<Card style={{height:"360px", borderRadius:"5px"}} onClick={()=>{window.location=item.link}}>
+					<Card style={{height:"360px", borderRadius:"5px",padding:"5px"}} onClick={()=>{window.location=item.link}}>
 			      <CardActionArea>
 			        <CardMedia
 			          className={classes.media}

@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TopBar from './Components/TopBar'
-import CustomDrawer from './Components/Drawer'
+import ChatbotDrawer from './Components/ChatbotDrawer'
 
 
 const HomeContainer = props=>{
@@ -45,7 +45,7 @@ const HomeContainer = props=>{
     <div className={classes.root}>
       <CssBaseline />
       <TopBar handleDrawerOpen={handleDrawerOpen} open={open}/>
-      <CustomDrawer open={open} handleDrawerClose={handleDrawerClose}/>
+      <ChatbotDrawer open={open} handleDrawerClose={handleDrawerClose}/>
         <div className={classes.appBarSpacer} />
           {props.children}
     </div>

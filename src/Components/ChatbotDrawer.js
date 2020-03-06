@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Listitems from './ListItems'
 
-const CustomDrawer = props=>{
+const ChatbotDrawer = props=>{
 	const drawerWidth = 240;
 	const useStyles = makeStyles(theme => ({
 	  root: {
@@ -38,7 +38,6 @@ const CustomDrawer = props=>{
 
 	return(
 		<Drawer
-			variant="permanent"
 	        classes={{
 	          paper: clsx(classes.drawerPaper, !props.open && classes.drawerPaperClose),
 	        }}
@@ -55,4 +54,4 @@ const CustomDrawer = props=>{
 	);
 }
 
-export default CustomDrawer 
+export default ChatbotDrawer

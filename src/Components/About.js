@@ -85,7 +85,7 @@ const featuredPosts = [
     title: 'Browser Extension',
     description:
       'We have created a browser extension to allow users to flag different news sites. This is used to establish a trust score.',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTx29PFHMw9NDqgVMOiX9E-Y6nI10ihcSCK-QcjgVKWOZKRqogs',
+    image: 'https://cnet1.cbsistatic.com/img/mSWyXxMYcnm0J9OQB--mIujl5vk=/1092x0/2018/09/02/2bb2f48f-e695-4a2f-8618-0c7418a763d9/browser-icons-logos-chrome-big-black-4sts.jpg',
     imageText: 'Image Text',
   },
   {

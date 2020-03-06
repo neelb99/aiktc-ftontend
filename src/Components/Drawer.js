@@ -1,5 +1,5 @@
 import React from 'react'
-import {Drawer,Divider,List} from '@material-ui/core';
+import {Drawer,Divider,List,Hidden} from '@material-ui/core';
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
@@ -37,20 +37,42 @@ const CustomDrawer = props=>{
 	const classes = useStyles();
 
 	return(
-		<Drawer
-	        classes={{
-	          paper: clsx(classes.drawerPaper, !props.open && classes.drawerPaperClose),
-	        }}
-	        open={props.open}
-	      >
-	        <div className={classes.toolbarIcon}>
-	          <IconButton onClick={props.handleDrawerClose}>
-	            <ChevronLeftIcon />
-	          </IconButton>
-	        </div>
-	        <Divider />
-	        <List><Listitems /></List>
-      	</Drawer>
+		<Hidden mdUp>
+				<Drawer
+			    // variant="permanent"
+			    classes={{
+			      paper: clsx(classes.drawerPaper, !props.open && classes.drawerPaperClose),
+			    }}
+			    open={props.open}
+			  >
+			    <div className={classes.toolbarIcon}>
+			      <IconButton onClick={handleDrawerClose}>
+			        <ChevronLeftIcon />
+			      </IconButton>
+			    </div>
+			    <Divider />
+			    <List><MainListItems /></List>
+			    <Divider />
+			  </Drawer>
+			</Hidden>
+			<Hidden smDown>
+				<Drawer
+			    variant="permanent"
+			    classes={{
+			      paper: clsx(classes.drawerPaper, !true && classes.drawerPaperClose),
+			    }}
+			    open={true}
+			  >
+			    <div className={classes.toolbarIcon}>
+			      <IconButton onClick={handleDrawerClose}>
+			        <ChevronLeftIcon />
+			      </IconButton>
+			    </div>
+			    <Divider />
+			    <List><MainListItems /></List>
+			    <Divider />
+			  </Drawer>
+			</Hidden>
 	);
 }
 

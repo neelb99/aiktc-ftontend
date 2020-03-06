@@ -38,7 +38,6 @@ const CustomDrawer = props=>{
 
 	return(
 		<Drawer
-			variant="permanent"
 	        classes={{
 	          paper: clsx(classes.drawerPaper, !props.open && classes.drawerPaperClose),
 	        }}

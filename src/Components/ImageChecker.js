@@ -9,7 +9,6 @@ import Alert from '@material-ui/lab/Alert';
 
 const ImageChecker = ()=>{
 	const [submitted,setSubmitted] = useState(false)
-	const [news,setNews] = useState('')
 	const [file,setFile] = useState([])
 	const [status,setStatus] = useState('')
 	const [alertText,setAlertText] = useState('')
@@ -69,33 +68,8 @@ const ImageChecker = ()=>{
 		e.preventDefault()
 		const formData = new FormData();
 		setLoading(true)
-		if(news==='' && file.length===0)
+		if(file.length===0)
 			alert('Upload an Image!')
-		else if(news===''){
-			formData.append('image',file)
-			const response = await fetch("https://verifyimage.herokuapp.com/api/verifyimage",
-			{
-        		body: formData,
-        		method: "post"
-    		});
-    		const data = await response.json()
-    		if(data==='Image seems to be original'){
-    			setStatus("success")
-    			setAlertText("The Image seems to be Original")
-
-    		}
-    		else if(data==='Image is probably computer generated!'){
-    			setStatus("warning")
-    			setAlertText("Image is probably computer generated!")
-    		}
-    		else{
-    			setStatus("error")
-    			setAlertText("The image seems to be Edited")
-    		}
-    		setSubmitted(true)
-		}
-		else if(file.length===0)
-			console.log("only text")
 		else{
 			formData.append('image',file)
 			const response = await fetch("https://verifyimage.herokuapp.com/api/verifyimage",
@@ -107,6 +81,7 @@ const ImageChecker = ()=>{
     		if(data==='Image seems to be original'){
     			setStatus("success")
     			setAlertText("The Image seems to be Original")
+
     		}
     		else if(data==='Image is probably computer generated!'){
     			setStatus("warning")
@@ -142,19 +117,6 @@ const ImageChecker = ()=>{
 	        			<Button className={classes.btn}>{file.lastModified?'Change selected file':'Upload Image'}</Button>
 	        			<input type="file" name="myfile" accept="image/*" onChange={handleFileChange} className={classes.file} />
 		          </div>
-		          <TextField
-		          	multiline = {true}
-		            variant="outlined"
-		            rows="2"
-		            margin="normal"
-		            fullWidth
-		            id="title"
-		            label="News"
-		            name="username"
-		            autoFocus
-		            value={news}
-		            onChange={e=>setNews(e.target.value)}
-		          />
 		          <Button
 		            type="submit"
 		            fullWidth

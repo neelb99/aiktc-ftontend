@@ -54,7 +54,7 @@ const About = ()=>{
 const mainFeaturedPost = {
   title: 'What is Fake News',
   description:
-    "Fake News is created to deliberately misinform or deceive readers. Usually, these stories either influence people’s views, push a political agenda or cause confusion and and hatred.",
+    "Fake News is created to deliberately misinform readers. These stories either influence people’s views, push a political agenda or cause confusion.",
   image: 'https://www.sciencenews.org/wp-content/uploads/2018/07/080418_fakenews_feat.jpg',
   imgText: 'main image description'
 };

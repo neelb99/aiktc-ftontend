@@ -16,7 +16,7 @@ const RecentNews = ()=>{
 	const [loading,setLoading] = useState(true)
 	useEffect(()=>{
 		(async ()=>{
-			const data = await fetch('http://localhost:4002/api/recentnews');
+			const data = await fetch('https://recentnewsdata.herokuapp.com/api/recentnews');
 			const finaldata = await data.json()
 			setNews(finaldata)
 			setLoading(false)

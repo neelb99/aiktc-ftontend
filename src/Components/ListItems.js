@@ -24,7 +24,7 @@ const Listitems = ()=>{
         </ListItemIcon>
         <ListItemText primary="Recent Fake News" />
       </ListItem>
-      <ListItem button onClick={()=>history.push('/about')}>
+      <ListItem button onClick={()=>history.push('/')}>
         <ListItemIcon>
           <HelpIcon />
         </ListItemIcon>

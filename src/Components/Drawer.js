@@ -47,12 +47,12 @@ const CustomDrawer = props=>{
 			    open={props.open}
 			  >
 			    <div className={classes.toolbarIcon}>
-			      <IconButton onClick={handleDrawerClose}>
+			      <IconButton onClick={props.handleDrawerClose}>
 			        <ChevronLeftIcon />
 			      </IconButton>
 			    </div>
 			    <Divider />
-			    <List><MainListItems /></List>
+			    <List><Listitems /></List>
 			    <Divider />
 			  </Drawer>
 			</Hidden>
@@ -65,12 +65,12 @@ const CustomDrawer = props=>{
 			    open={true}
 			  >
 			    <div className={classes.toolbarIcon}>
-			      <IconButton onClick={handleDrawerClose}>
+			      <IconButton onClick={props.handleDrawerClose}>
 			        <ChevronLeftIcon />
 			      </IconButton>
 			    </div>
 			    <Divider />
-			    <List><MainListItems /></List>
+			    <List><Listitems /></List>
 			    <Divider />
 			  </Drawer>
 			</Hidden>

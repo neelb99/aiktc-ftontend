@@ -41,7 +41,7 @@ const ImageChecker = ()=>{
       border: '2px solid gray',
       color: 'gray',
       backgroundColor: 'white',
-      padding:' 4px 125px',
+      padding:' 4px 10px',
       borderRadius: '8px',
       fontSize: '20px',
       fontWeight: 'bold',

@@ -37,6 +37,7 @@ const CustomDrawer = props=>{
 	const classes = useStyles();
 
 	return(
+		<>
 		<Hidden mdUp>
 				<Drawer
 			    // variant="permanent"
@@ -73,6 +74,7 @@ const CustomDrawer = props=>{
 			    <Divider />
 			  </Drawer>
 			</Hidden>
+			</>
 	);
 }
 

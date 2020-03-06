@@ -12,7 +12,7 @@ const Listitems = ()=>{
 	const history = useHistory()
 	return(
 		<>
-			<ListItem button onClick={()=>history.push('/')} style={{marginTop:"10px"}}>
+			<ListItem button onClick={()=>history.push('/chatbot')} style={{marginTop:"10px"}}>
         <ListItemIcon>
           <VerifiedUserIcon />
         </ListItemIcon>

@@ -9,9 +9,9 @@ function App() {
   return (
     <BrowserRouter>
     	<Switch>
-	    	<Route exact path ='/' component={Home}/>
+	    	<Route exact path ='/chatbot' component={Home}/>
 	    	<Route exact path ='/recentfake' component={RecentNews}/>
-	    	<Route exact path ='/about' component={About}/>
+	    	<Route exact path ='/' component={About}/>
 	    	<Route exact path ='/imagechecker' component={ImageChecker}/>
 	    </Switch>
     </BrowserRouter>

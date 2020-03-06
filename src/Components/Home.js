@@ -126,13 +126,16 @@ const Home = ()=>{
       await setChatHistory([...chatHistory,{type:"user",message:currentmsg}])
       const response = await fetch("https://farzi-chat.herokuapp.com/chat",
       {
-            body: {msg:currentmsg},
-            method: "POST"
+            body: JSON.stringify({msg:currentmsg}),
+            method: "POST",
+            headers:{
+              "content-type":"application/json"
+            }
       });
       console.log(response)
       const data = await response.json()
       console.log(data)
-      setChatHistory([...chatHistory,{type:"user",message:currentmsg},{type:"bot",message:data[1].reply}]);
+      setChatHistory([...chatHistory,{type:"user",message:currentmsg},{type:"bot",message:data.reply}]);
       scrollToBottom();
       inputRef.current.focus()
   }
